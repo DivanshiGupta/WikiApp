@@ -8,14 +8,15 @@ block styles %} {{ super() }}
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Welcome to WikiSearch!</h1>
+      <h1 style="color: blue;">Welcome to WikiSearch!</h1>
 
       <p class="lead">
         Before creating a new page make sure to check if the Wikipedia page
         already exists.
       </p>
-
-      {{ wtf.quick_form(form) }}
+      <div style="font-size: large;">
+        {{ wtf.quick_form(form) }}
+      </div>
       <p class="space-above"><strong>{{ search }}</strong></p>
 
       <p class="space-above"><strong>{{ message }}</strong></p>
