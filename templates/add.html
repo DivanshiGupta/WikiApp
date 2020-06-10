@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <title>WikiSearch</title>
+  </head>
+  <body>
+    <h1>WikiSearch</h1>
+
+    <div>
+      <form method="POST" width: 30%;">
+        <input type="text" id="title" placeholder="Search Title" value =  "{{request.form['title']}}" > </input>
+        <button type="submit">Submit </button>
+      </form>
+    </div>
+  </body>
+</html>
