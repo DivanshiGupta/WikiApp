@@ -14,7 +14,7 @@
   display: block;
 }
 .topnav {
-  background-color: rgb(155, 24, 24);
+  background-color: #4a4b8b;
   overflow: hidden;
 }
 
@@ -36,6 +36,8 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4caf50;
+  background-color: rgb(221, 24, 211);
+
+  /* background-color: #4caf50; */
   color: white;
 }
