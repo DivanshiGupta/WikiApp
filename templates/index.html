@@ -9,17 +9,21 @@
       <a class="active" href="">Search </a>
       <a href="template">Templates</a>
     </div>
-    <div
-      class="intro"
-      style="color: white; margin-top: 30px; font-size: large;"
-    >
+    <div class="intro" style="color: white; margin-top: 30px; font-size: large">
       Search helps you search if a page is present in English Wikipedia. It also
       gives a summary of the page.
 
-      <form action="#" method="POST">
+      <form action="#" method="POST" class="form-container">
         <label for="title">Title: </label>
         <input type="text" id="title" name="title" /><br />
-        <input type="submit" value="Submit" />
+        <label for="lang">Choose a language:</label>
+        <select name="lang" id="lang">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="te">Telugu</option>
+          <option value="ta">Tamil</option>
+        </select>
+        <input type="submit" value="Submit" class="btn" />
       </form>
       {{search}}
       <br />

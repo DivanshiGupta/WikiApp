@@ -7,6 +7,7 @@ from flask_bootstrap import Bootstrap
 import os
 import json
 import sys
+from googletrans import Translator
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'some?bamboozle#string-foobar'
 
@@ -25,7 +26,7 @@ def index():
     search = ''
     if request.method == "POST":
         title = request.form["title"]
-
+        lang = request.form["lang"]
         search = wikipedia.search(title)
         y = []
         if search == y:
@@ -39,6 +40,9 @@ def index():
                 message = wikipedia.summary(s)
             search = 'This Wikipedia page already exists. Following is a summary of the same'
             # message = wikipedia.summary(title)
+            translator = Translator()
+            if lang != "en":
+                message = translator.translate(message, dest=lang)
     return render_template('index.html', message=message, search=search)
 
 
@@ -47,6 +51,7 @@ def template():
     message = ''
     if request.method == "POST":
         title = request.form["title"]
+        lang = request.form["lang"]
         json_object = json.dumps(title, indent=4)
         with open("test.json", "w") as outfile:
             outfile.write(json_object)
@@ -63,13 +68,11 @@ def template():
         os.system("python3 template.py")
         f = open('generated_templates.json')
         message = json.load(f)
+        translator = Translator()
+        if lang != "en":
+            message = translator.translate(message, dest=lang)
+        print(message)
     return render_template('template.html', message=message)
-# # @app.route('/add', methods=['POST'])
-# @app.route('/add',methods=('GET','POST'))
-
-# def add():
-
-#     return render_template('add.html')
 
 
 if __name__ == '__main__':

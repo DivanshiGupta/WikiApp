@@ -17,7 +17,26 @@
   background-color: #4a4b8b;
   overflow: hidden;
 }
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  /* background-color: white; */
+}
 
+/* When the inputs get focus, do something */
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 6px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 15px;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
