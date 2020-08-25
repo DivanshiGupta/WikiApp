@@ -2,13 +2,17 @@
 .dark {
   background-color: black;
 }
-.intro {
-  background-color: black;
+.space-above {
   margin-top: 20px;
+  padding-top: 20px;
   font-size: large;
-  color: white;
 }
-
+.h {
+  color: #0033cc;
+}
+.blocker {
+  display: block;
+}
 .topnav {
   background-color: rgb(155, 24, 24);
   overflow: hidden;
@@ -21,7 +25,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
